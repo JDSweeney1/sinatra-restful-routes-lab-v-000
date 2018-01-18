@@ -14,11 +14,12 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes/:id' do
     session[:user_id] = params[:id]
+    @recipe = 
     erb :show
   end
 
   post '/recipes' do
     @recipe = Recipe.create(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
-    redirect "/recipes/#{@recipe.id}"
+    redirect to "/recipes/#{@recipe.id}"
   end
 end

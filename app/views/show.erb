@@ -1,4 +1,4 @@
 <p>Name: <%= @recipe.name %></p>
 <p>Ingredients: <%= @recipe.ingredients %>/<p>
 <p>Cook Time: <%= @recipe.cook_time %></p>
-<a href="/recipes/:id/delete">Delete</a>
+<a href="/recipes/#{@recipe.id}/delete">Delete</a>

@@ -2,7 +2,7 @@
 <p>Ingredients: <%= @recipe.ingredients %></p>
 <p>Cook Time: <%= @recipe.cook_time %></p>
 
-<form method="post" action="/recipes/:id">
+<form method="post" action="<%=@recipe.id%">
   <input id="hidden" type="hidden" name="_method" value="patch">
   Name: <input type="text" name="name"><br>
   Ingredients: <input type="text" name="ingredients"><br>
